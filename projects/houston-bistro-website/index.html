@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Houston Bistro — Neighborhood Restaurant in Houston, TX</title>
+<meta name="description" content="Houston Bistro — a friendly neighborhood restaurant in Houston, Texas. View the menu, check opening hours, and book a table online. Demo website built by Bailey Langford.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="#top">Houston Bistro</a>
+    <nav aria-label="Main navigation">
+      <a href="#menu">Menu</a>
+      <a href="#hours">Hours &amp; location</a>
+      <a href="#book" class="nav-cta">Book a table</a>
+    </nav>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Houston, Texas — Est. 2019</p>
+      <h1>Good food, honest prices, a table waiting for you.</h1>
+      <p class="lede">A neighborhood bistro serving Texas comfort food with a Gulf Coast twist. Walk-ins welcome — or book ahead and we'll have your table ready.</p>
+      <a class="btn btn-primary" href="#book">Book a table</a>
+      <a class="btn btn-secondary" href="#menu">See the menu</a>
+    </div>
+  </section>
+
+  <section id="menu" class="section">
+    <div class="container">
+      <h2>Menu</h2>
+      <div class="menu-filters" role="group" aria-label="Filter menu">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="starters">Starters</button>
+        <button class="filter-btn" data-filter="mains">Mains</button>
+        <button class="filter-btn" data-filter="desserts">Desserts</button>
+      </div>
+      <div class="menu-grid" id="menu-grid"></div>
+      <p class="note">Prices include tax. Ask your server about today's specials and allergen information.</p>
+    </div>
+  </section>
+
+  <section id="hours" class="section section-alt">
+    <div class="container hours-grid">
+      <div>
+        <h2>Hours &amp; location</h2>
+        <ul class="hours-list">
+          <li><span>Mon–Thu</span><span>11:00 AM – 9:00 PM</span></li>
+          <li><span>Fri–Sat</span><span>11:00 AM – 10:00 PM</span></li>
+          <li><span>Sunday</span><span>10:00 AM – 3:00 PM (brunch)</span></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Find us</h2>
+        <address>
+          123 Main Street<br>
+          Houston, TX 77002<br>
+          <a href="tel:+17135550134">(713) 555-0134</a><br>
+          <a href="mailto:hello@houstonbistro.example">hello@houstonbistro.example</a>
+        </address>
+        <p class="note">Free parking behind the building. Two blocks from the light rail.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="book" class="section">
+    <div class="container narrow">
+      <h2>Book a table</h2>
+      <p>Pick a date and time and we'll hold your table for 15 minutes past your booking time.</p>
+      <form id="booking-form" class="form">
+        <label>Name <input type="text" name="name" required autocomplete="name"></label>
+        <label>Email <input type="email" name="email" required autocomplete="email"></label>
+        <label>Phone <input type="tel" name="phone" required autocomplete="tel"></label>
+        <div class="form-row">
+          <label>Date <input type="date" name="date" id="booking-date" required></label>
+          <label>Time
+            <select name="time" required>
+              <option>11:30 AM</option><option>12:00 PM</option><option>12:30 PM</option>
+              <option>1:00 PM</option><option>5:30 PM</option><option>6:00 PM</option>
+              <option>6:30 PM</option><option>7:00 PM</option><option>7:30 PM</option><option>8:00 PM</option>
+            </select>
+          </label>
+          <label>Party size
+            <select name="party" required>
+              <option>1</option><option selected>2</option><option>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7+</option>
+            </select>
+          </label>
+        </div>
+        <label>Notes (optional) <textarea name="notes" rows="3" placeholder="Birthday, high chair, allergies…"></textarea></label>
+        <button class="btn btn-primary" type="submit">Request booking</button>
+        <p id="booking-status" class="form-status" role="status"></p>
+      </form>
+      <h3>Your bookings on this device</h3>
+      <ul id="my-bookings" class="booking-list"></ul>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 Houston Bistro — demo website built by <a href="../../index.html">Bailey Langford</a>, freelance software developer, Houston, TX.</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
