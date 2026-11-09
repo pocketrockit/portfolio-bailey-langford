@@ -1,0 +1,4 @@
+node_modules/
+.DS_Store
+projects/workflow-automation/output/
+projects/site-health-audit/report.json
