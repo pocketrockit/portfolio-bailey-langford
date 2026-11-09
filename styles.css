@@ -1,0 +1,68 @@
+:root {
+  --navy: #0f2440;
+  --navy-light: #16365c;
+  --gold: #c9a227;
+  --gold-dark: #a8861d;
+  --bg: #ffffff;
+  --bg-alt: #f4f6f8;
+  --text: #1c2530;
+  --muted: #5a6b7d;
+  --border: #dbe2e8;
+  --radius: 12px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+a { color: var(--navy-light); }
+a:hover { color: var(--gold-dark); }
+.container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.narrow { max-width: 720px; }
+.site-header { background: var(--navy); color: #fff; position: sticky; top: 0; z-index: 10; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 60px; flex-wrap: wrap; }
+.logo { color: #fff; font-weight: 800; font-size: 1.15rem; text-decoration: none; }
+.site-header nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.site-header nav a { color: #dbe6f2; text-decoration: none; font-size: 0.95rem; }
+.site-header nav a:hover { color: #fff; }
+.nav-cta { background: var(--gold); color: var(--navy) !important; padding: 6px 14px; border-radius: 999px; font-weight: 700; }
+.hero { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-light) 100%); color: #fff; padding: 72px 0 56px; }
+.eyebrow { color: var(--gold); text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem; font-weight: 700; margin: 0 0 12px; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.12; margin: 0 0 16px; max-width: 760px; }
+.lede { font-size: 1.15rem; color: #dbe6f2; max-width: 760px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin: 28px 0; }
+.btn { display: inline-block; padding: 12px 22px; border-radius: 8px; text-decoration: none; font-weight: 700; border: 1px solid transparent; cursor: pointer; font-size: 1rem; }
+.btn-primary { background: var(--gold); color: var(--navy); }
+.btn-primary:hover { background: #dbb63a; color: var(--navy); }
+.btn-secondary { background: transparent; color: #fff; border-color: #fff; }
+.btn-secondary:hover { background: rgba(255,255,255,0.12); color: #fff; }
+.hero-stats { list-style: none; display: flex; gap: 32px; flex-wrap: wrap; margin: 32px 0 0; padding: 24px 0 0; border-top: 1px solid rgba(255,255,255,0.25); }
+.hero-stats li { display: flex; flex-direction: column; }
+.hero-stats strong { font-size: 1.6rem; }
+.hero-stats span { color: #b9c9da; font-size: 0.9rem; }
+.section { padding: 64px 0; }
+.section-alt { background: var(--bg-alt); }
+h2 { font-size: 1.9rem; margin: 0 0 20px; color: var(--navy); }
+h3 { margin: 0 0 8px; color: var(--navy); }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.skill-group { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+.tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; }
+.tags li { background: #eef2f6; border: 1px solid var(--border); border-radius: 999px; padding: 5px 12px; font-size: 0.9rem; }
+.standards { color: var(--muted); margin-top: 24px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 22px; }
+.section-alt .card { background: #fff; }
+.price { font-weight: 700; color: var(--navy); }
+.note { color: var(--muted); font-size: 0.95rem; }
+.contact-list { list-style: none; padding: 0; margin: 0 0 28px; }
+.contact-list li { padding: 6px 0; border-bottom: 1px solid var(--border); }
+.contact-form { display: grid; gap: 14px; }
+.contact-form label { display: grid; gap: 6px; font-weight: 600; }
+.contact-form input, .contact-form select, .contact-form textarea { font: inherit; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; width: 100%; }
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: 2px solid var(--gold); border-color: var(--gold); }
+.form-status { color: var(--navy); font-weight: 600; min-height: 1.4em; }
+.site-footer { background: var(--navy); color: #b9c9da; padding: 28px 0; font-size: 0.9rem; }
+.site-footer a { color: #fff; }
+@media (max-width: 640px) {
+  .section { padding: 44px 0; }
+  .hero { padding: 48px 0 40px; }
+  .header-inner { padding-top: 10px; padding-bottom: 10px; }
+}
