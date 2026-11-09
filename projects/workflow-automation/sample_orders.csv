@@ -1,0 +1,8 @@
+order_id,customer_name,customer_email,item,quantity,unit_price,order_date
+ORD-1001,Maria Santos,maria@example.com,Website monthly maintenance,1,200.00,2026-11-01
+ORD-1002,Maria Santos,maria@example.com,Homepage content update,2,50.00,2026-11-03
+ORD-1003,James Carter,james@example.com,Bug fix - contact form,1,95.00,2026-11-02
+ORD-1004,Priya Patel,priya@example.com,Speed optimisation,1,250.00,2026-11-04
+ORD-1005,Priya Patel,priya@example.com,Image compression,3,20.00,2026-11-04
+ORD-1006,Bad Row,bad-email,Test item,0,abc,2026-11-05
+ORD-1007,David Nguyen,david@example.com,New landing page,1,500.00,2026-11-06
