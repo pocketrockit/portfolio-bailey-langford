@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Dashboard — Demo by Bailey Langford</title>
+<meta name="description" content="A small-business booking and customer dashboard demo: appointments, customers, search, filters, and stats, with data saved in the browser.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="#top">Booking Dashboard</a>
+    <span class="header-note">Demo — data is stored in your browser only</span>
+  </div>
+</header>
+<main id="top" class="container">
+  <section class="stats" aria-label="Business stats">
+    <div class="stat"><strong id="stat-today">0</strong><span>Appointments today</span></div>
+    <div class="stat"><strong id="stat-upcoming">0</strong><span>Upcoming</span></div>
+    <div class="stat"><strong id="stat-customers">0</strong><span>Customers</span></div>
+    <div class="stat"><strong id="stat-revenue">$0</strong><span>Revenue (upcoming)</span></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Appointments</h2>
+      <div class="controls">
+        <input type="search" id="search" placeholder="Search customer or service…" aria-label="Search appointments">
+        <select id="status-filter" aria-label="Filter by status">
+          <option value="all">All statuses</option>
+          <option value="confirmed">Confirmed</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+          <option value="cancelled">Cancelled</option>
+        </select>
+        <button class="btn btn-primary" id="reset-demo" type="button">Reset demo data</button>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr><th>Date</th><th>Time</th><th>Customer</th><th>Service</th><th>Price</th><th>Status</th><th>Actions</th></tr>
+      </thead>
+      <tbody id="appointments-body"></tbody>
+    </table>
+    <p id="no-results" class="note" hidden>No appointments match your search.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Add an appointment</h2>
+    <form id="add-form" class="form">
+      <label>Customer name <input type="text" name="customer" required></label>
+      <label>Service
+        <select name="service" required>
+          <option value="Haircut — $35">Haircut — $35</option>
+          <option value="Color — $85">Color — $85</option>
+          <option value="Manicure — $30">Manicure — $30</option>
+          <option value="Massage (60 min) — $70">Massage (60 min) — $70</option>
+          <option value="Consultation — $0">Consultation — $0</option>
+        </select>
+      </label>
+      <label>Date <input type="date" name="date" required></label>
+      <label>Time <input type="time" name="time" required></label>
+      <button class="btn btn-primary" type="submit">Add appointment</button>
+      <p id="form-status" class="form-status" role="status"></p>
+    </form>
+  </section>
+
+  <section class="panel">
+    <h2>Customers</h2>
+    <ul id="customer-list" class="customer-list"></ul>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <p>Demo dashboard built by <a href="../../index.html">Bailey Langford</a>, freelance software developer, Houston, TX. Sample data only — no real customers.</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
